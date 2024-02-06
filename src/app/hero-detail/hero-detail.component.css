@@ -1,4 +1,8 @@
 /* HeroDetailComponent's private CSS styles */
+h2 {
+    margin: 10px 0;
+}
+
 label {
     color: #435960;
     font-weight: bold;
@@ -10,7 +14,7 @@ input {
 }
 
 button {
-    margin-top: 20px;
+    margin: 5px 5px 0 0;
     background-color: #eee;
     padding: 1rem;
     border-radius: 4px;
