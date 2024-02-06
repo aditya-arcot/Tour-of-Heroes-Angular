@@ -1,8 +1,8 @@
 import { Component } from '@angular/core';
 import { CommonModule } from '@angular/common';
-import { Hero } from '../hero';
-import { HeroService } from '../hero.service';
 import { RouterModule } from '@angular/router';
+import { Hero } from '../../models/hero';
+import { HeroService } from '../../services/hero.service';
 import { HeroSearchComponent } from '../hero-search/hero-search.component';
 
 @Component({

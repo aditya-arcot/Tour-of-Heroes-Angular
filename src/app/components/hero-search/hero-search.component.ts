@@ -1,11 +1,10 @@
 import { Component } from '@angular/core';
 import { RouterModule } from '@angular/router';
 import { Observable, Subject } from 'rxjs';
-import { Hero } from '../hero';
-import { HeroService } from '../hero.service';
 import { CommonModule } from '@angular/common';
 import { debounceTime, distinctUntilChanged, switchMap } from 'rxjs/operators';
-
+import { Hero } from '../../models/hero';
+import { HeroService } from '../../services/hero.service';
 
 @Component({
     selector: 'app-hero-search',

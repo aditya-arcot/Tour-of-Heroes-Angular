@@ -1,10 +1,10 @@
 import { Component, Input } from '@angular/core';
 import { CommonModule } from '@angular/common';
 import { FormsModule } from '@angular/forms';
-import { Hero } from '../hero';
 import { ActivatedRoute } from '@angular/router';
 import { Location } from '@angular/common';
-import { HeroService } from '../hero.service';
+import { Hero } from '../../models/hero';
+import { HeroService } from '../../services/hero.service';
 
 @Component({
     selector: 'app-hero-detail',
