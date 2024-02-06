@@ -1,4 +1,4 @@
-import { Component, Input } from '@angular/core';
+import { Component, Input, OnInit } from '@angular/core';
 import { CommonModule } from '@angular/common';
 import { FormsModule } from '@angular/forms';
 import { ActivatedRoute } from '@angular/router';
@@ -13,7 +13,7 @@ import { HeroService } from '../../services/hero.service';
     templateUrl: './hero-detail.component.html',
     styleUrl: './hero-detail.component.css'
 })
-export class HeroDetailComponent {
+export class HeroDetailComponent implements OnInit {
     @Input() hero?: Hero;
     constructor(
         private route: ActivatedRoute,

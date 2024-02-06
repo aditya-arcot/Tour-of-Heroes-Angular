@@ -1,4 +1,4 @@
-import { Component } from '@angular/core';
+import { Component, OnInit } from '@angular/core';
 import { RouterModule } from '@angular/router';
 import { Observable, Subject } from 'rxjs';
 import { CommonModule } from '@angular/common';
@@ -13,7 +13,7 @@ import { HeroService } from '../../services/hero.service';
     templateUrl: './hero-search.component.html',
     styleUrl: './hero-search.component.css'
 })
-export class HeroSearchComponent {
+export class HeroSearchComponent implements OnInit {
     heroes$!: Observable<Hero[]>
     private searchTerms = new Subject<string>()
     constructor(private heroService: HeroService) { }

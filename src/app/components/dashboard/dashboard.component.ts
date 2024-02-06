@@ -1,4 +1,4 @@
-import { Component } from '@angular/core';
+import { Component, OnInit } from '@angular/core';
 import { CommonModule } from '@angular/common';
 import { RouterModule } from '@angular/router';
 import { Hero } from '../../models/hero';
@@ -13,7 +13,7 @@ import { HeroSearchComponent } from '../hero-search/hero-search.component';
     styleUrl: './dashboard.component.css'
 })
 
-export class DashboardComponent {
+export class DashboardComponent implements OnInit {
     heroes: Hero[] = [];
     constructor(private heroService: HeroService) { }
     ngOnInit(): void {

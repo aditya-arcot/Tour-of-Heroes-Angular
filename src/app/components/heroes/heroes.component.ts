@@ -1,4 +1,4 @@
-import { Component } from '@angular/core';
+import { Component, OnInit } from '@angular/core';
 import { CommonModule } from '@angular/common';
 import { FormsModule } from '@angular/forms';
 import { HeroDetailComponent } from '../hero-detail/hero-detail.component';
@@ -13,7 +13,7 @@ import { HeroService } from '../../services/hero.service';
     templateUrl: './heroes.component.html',
     styleUrl: './heroes.component.css'
 })
-export class HeroesComponent {
+export class HeroesComponent implements OnInit {
     heroes: Hero[] = [];
     constructor(private heroService: HeroService) { }
     ngOnInit(): void {
@@ -27,10 +27,10 @@ export class HeroesComponent {
         name = name.trim();
         if (!name) { return; }
         this.heroService.addHero({ name } as Hero)
-            .subscribe(_ => this.getHeroes())
+            .subscribe(() => this.getHeroes())
     }
     delete(hero: Hero): void {
         this.heroService.deleteHero(hero.id)
-            .subscribe(_ => this.getHeroes());
+            .subscribe(() => this.getHeroes());
     }
 }
